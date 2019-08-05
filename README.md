@@ -1,5 +1,7 @@
 # blog.dickwyn.xyz 🌟
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/59226ad9-33cd-4435-b984-5428f2728e4f/deploy-status)](https://app.netlify.com/sites/priceless-curie-5a36d0/deploys)
+
 My personal blog built with a combination of Gatsby and Netlify CMS.
 
 ## Project Dependencies
