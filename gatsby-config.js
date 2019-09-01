@@ -20,7 +20,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'posts',
-        path: `${__dirname}/posts`,
+        path: `${__dirname}/data/blog`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -41,4 +41,4 @@ module.exports = {
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
   ],
-}
+};
