@@ -7,8 +7,6 @@ const getPosts = () => {
         nodes {
           frontmatter {
             title
-            author
-            slug
           }
           html
         }
@@ -18,8 +16,6 @@ const getPosts = () => {
 
   return data.allMarkdownRemark.nodes.map(post => ({
     title: post.frontmatter.title,
-    author: post.frontmatter.author,
-    slug: post.frontmatter.slug,
   }));
 };
 
