@@ -1,0 +1,31 @@
+footer {
+  grid-area: footer;
+  background-color: yellow;
+  display: flex;
+
+  .left {
+    flex: 1;
+    background-color: green;
+    text-transform: uppercase;
+  }
+
+  .right {
+    flex: 2;
+    background-color: cyan;
+    display: flex;
+    justify-content: flex-end;
+
+    a:not(:last-child) {
+      padding-right: 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+
+    .right {
+      display: flex;
+      justify-content: space-evenly;
+    }
+  }
+}
