@@ -1,6 +1,9 @@
 @import './variables';
+@import './components/Layout';
 @import './components/Footer';
 @import './components/Header';
+@import './components/PostPreview';
+@import './components/BlogPost';
 
 html,
 body,
@@ -13,52 +16,9 @@ html {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
+
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: $primary;
-}
-
-#gatsby-focus-wrapper {
-  background-color: $accent;
-  height: 100%;
-  display: grid;
-  grid-template-areas:
-    'header header header'
-    'content content side'
-    'footer footer footer';
-  grid-template-columns: 200px 1fr 200px;
-  grid-template-rows: auto 1fr auto;
-}
-
-main {
-  grid-area: content;
-}
-
-.sidebar {
-  grid-area: side;
-}
-
-@media (max-width: 768px) {
-  #gatsby-focus-wrapper {
-    grid-template-areas:
-      'header'
-      'content'
-      'side'
-      'footer';
-
-    grid-template-columns: 1fr;
-    grid-template-rows:
-      auto /* Header */
-      minmax(75px, auto) /* Nav */
-      1fr /* Content */
-      minmax(75px, auto) /* Sidebar */
-      auto; /* Footer */
-  }
-
-  nav,
-  aside {
-    margin: 0;
-  }
 }

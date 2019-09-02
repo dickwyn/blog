@@ -3,11 +3,9 @@ import PropTypes from 'prop-types';
 import React from 'react';
 
 const Header = ({ siteTitle }) => (
-  <header style={{}}>
+  <header>
     <div className="content">
-      <h1>
-        <Link to="/">{siteTitle}</Link>
-      </h1>
+      <Link to="/">{siteTitle}</Link>
     </div>
   </header>
 );

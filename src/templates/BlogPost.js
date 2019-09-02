@@ -24,14 +24,20 @@ const BlogPost = ({ data }) => {
 
   return (
     <Layout>
-      <Helmet titleTemplate="%s | Blog">
-        <title>{`${post.frontmatter.title}`}</title>
-        <meta name="description" content={`${post.frontmatter.description}`} />
-      </Helmet>
-      <h1>{post.frontmatter.title}</h1>
-      <h2>{post.frontmatter.author}</h2>
-      <h2>{post.frontmatter.date}</h2>
-      <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      <div className="content blog-post">
+        <Helmet titleTemplate="%s | Blog">
+          <title>{`${post.frontmatter.title}`}</title>
+          <meta name="description" content={`${post.frontmatter.description}`} />
+        </Helmet>
+        <div className="heading">
+          <h1>{post.frontmatter.title}</h1>
+          <h2>
+            Written by {post.frontmatter.author} on {post.frontmatter.date}
+          </h2>
+        </div>
+
+        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+      </div>
     </Layout>
   );
 };

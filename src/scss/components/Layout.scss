@@ -1,0 +1,41 @@
+#gatsby-focus-wrapper {
+  //   background-color: $accent;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'content content content'
+    'footer footer footer';
+  grid-template-columns: 200px 1fr 200px;
+  grid-template-rows: auto 1fr auto;
+
+  header,
+  main,
+  section#blog-posts,
+  footer {
+    .content {
+      margin: 0 auto;
+      max-width: 768px;
+      padding: 1.45rem 0rem;
+    }
+  }
+
+  main {
+    grid-area: content;
+    // background-color: #212121;
+  }
+
+  // Styles for mobile view
+  @media (max-width: 768px) {
+    // background-color: $dark-primary;
+    grid-template-columns: 1fr;
+
+    header,
+    main,
+    footer {
+      .content {
+        padding: 1.45rem 1.0875rem;
+      }
+    }
+  }
+}
