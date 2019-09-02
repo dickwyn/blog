@@ -5,17 +5,22 @@ const getPosts = () => {
     query {
       allMarkdownRemark {
         nodes {
+          fields {
+            slug
+          }
           frontmatter {
             title
+            date
           }
-          html
         }
       }
     }
   `);
 
   return data.allMarkdownRemark.nodes.map(post => ({
+    slug: post.fields.slug,
     title: post.frontmatter.title,
+    date: post.frontmatter.date,
   }));
 };
 

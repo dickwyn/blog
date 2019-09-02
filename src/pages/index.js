@@ -23,7 +23,6 @@ const IndexPage = () => {
       {posts.map(post => (
         <PostPreview key={post.slug} post={post} />
       ))}
-      <Link to="/page-2/">Go to page 2</Link>
     </Layout>
   );
 };
