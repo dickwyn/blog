@@ -55,7 +55,7 @@ exports.createPages = ({ actions, graphql }) => {
     posts.forEach(edge => {
       const { id } = edge.node;
       createPage({
-        path: edge.node.fields.slug,
+        path: `/blog${edge.node.fields.slug}`,
         tags: edge.node.frontmatter.tags,
         component: path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.js`),
         context: {

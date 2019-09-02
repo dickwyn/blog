@@ -7,10 +7,11 @@ const PostPreview = ({ post }) => (
     <h1>{post.title}</h1>
     <h2>{post.date}</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper velit eros, id
-      volutpat ipsum egestas vitae. Quisque in eros nisi.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
+      ullamcorper velit eros, id volutpat ipsum egestas vitae. Quisque in eros
+      nisi.
     </p>
-    <Link to={post.slug}>Read more</Link>
+    <Link to={`blog${post.slug}`}>Read more</Link>
   </div>
 );
 
