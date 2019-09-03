@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby';
 const getPosts = () => {
   const data = useStaticQuery(graphql`
     query {
-      allMarkdownRemark {
+      allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
         nodes {
           fields {
             slug
