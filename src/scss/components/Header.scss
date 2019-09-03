@@ -5,5 +5,24 @@ header {
   a {
     color: white;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+    justify-content: space-between;
+
+    button {
+      padding: 0;
+      font: inherit;
+      color: inherit;
+      background: none;
+      color: white;
+      border: 1px solid $divider;
+      border-radius: 8px;
+      cursor: pointer;
+      padding-left: 0.6ch;
+    }
   }
 }
