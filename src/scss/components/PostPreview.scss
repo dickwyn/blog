@@ -1,5 +1,25 @@
 .post-preview {
   max-width: 56ch;
   border-bottom: 1px solid $divider;
-  padding: 0 0 0.5rem;
+  padding: 0 0 1rem;
+
+  h2.title {
+    // color: $accent;
+    margin: 1.5ch 0 0.5ch;
+
+    a {
+      text-decoration: none;
+      color: $accent;
+    }
+  }
+
+  .subtitle {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 0.89rem;
+    margin: 0;
+  }
+
+  p {
+    margin: 1ch 0;
+  }
 }

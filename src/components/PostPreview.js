@@ -4,14 +4,14 @@ import { Link } from 'gatsby';
 
 const PostPreview = ({ post }) => (
   <div className="post-preview">
-    <h1>{post.title}</h1>
-    <h2>{post.date}</h2>
+    <h2 className="title">
+      <Link to={`blog${post.slug}`}>{post.title}</Link>
+    </h2>
+    <p className="subtitle">{post.date}</p>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-      ullamcorper velit eros, id volutpat ipsum egestas vitae. Quisque in eros
-      nisi.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper velit eros, id
+      volutpat ipsum egestas vitae. Quisque in eros nisi.
     </p>
-    <Link to={`blog${post.slug}`}>Read more</Link>
   </div>
 );
 
