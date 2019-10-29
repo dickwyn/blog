@@ -2,12 +2,6 @@ header {
   grid-area: header;
   background: black;
 
-  .title {
-    font-family: 'Staatliches', cursive;
-    font-size: 1.96rem;
-    text-transform: uppercase;
-  }
-
   a {
     color: white;
     text-decoration: none;
@@ -18,6 +12,17 @@ header {
   .content {
     display: flex;
     justify-content: space-between;
+
+    & > .title {
+      font-family: 'Staatliches', cursive;
+      font-size: 1.96rem;
+      text-transform: uppercase;
+      color: $secondary-text;
+
+      &:hover {
+        color: $white;
+      }
+    }
 
     button {
       background: $primary-text;
@@ -32,6 +37,18 @@ header {
 
       &:hover {
         background: $secondary-text;
+      }
+    }
+  }
+
+  @media (max-width: 368px) {
+    .title {
+      font-size: 1.7rem;
+    }
+    .content {
+      button {
+        font-size: 1.2rem;
+        padding: 0 15px;
       }
     }
   }

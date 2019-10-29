@@ -1,5 +1,4 @@
 #gatsby-focus-wrapper {
-  //   background-color: $accent;
   height: 100%;
   display: grid;
   grid-template-areas:
@@ -10,8 +9,6 @@
   grid-template-rows: auto 1fr auto;
 
   header,
-  main,
-  section#blog-posts,
   footer {
     .content {
       margin: 0 auto;
@@ -20,14 +17,19 @@
     }
   }
 
-  main {
-    grid-area: content;
-    // background-color: #212121;
+  main,
+  section#blog-posts {
+    .content {
+      margin: 0 auto;
+      max-width: 768px;
+    }
   }
 
-  // Styles for mobile view
+  main {
+    grid-area: content;
+  }
+
   @media (max-width: 768px) {
-    // background-color: $dark-primary;
     grid-template-columns: 1fr;
 
     header,

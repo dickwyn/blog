@@ -26,13 +26,23 @@ body {
 
   font-family: 'Roboto Condensed', sans-serif;
 
-  &.dark {
-    background-color: $primary-text;
-    color: $white;
-    main {
-      a {
-        color: $dark-primary;
-      }
+  a {
+    &:link {
+      color: $primary;
     }
+
+    &:visited {
+      color: $accent;
+    }
+
+    &:hover,
+    &:active {
+      color: $dark-primary;
+    }
+  }
+
+  &.dark {
+    background-color: $background-dark;
+    color: $white;
   }
 }

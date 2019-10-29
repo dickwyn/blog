@@ -8,19 +8,6 @@ footer {
 
     a {
       text-decoration: none;
-
-      &:link {
-        color: $primary;
-      }
-
-      &:visited {
-        color: $dark-primary;
-      }
-
-      &:hover,
-      &:active {
-        color: $accent;
-      }
     }
 
     .left {

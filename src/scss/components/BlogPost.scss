@@ -1,12 +1,13 @@
 .blog-post {
   h1 {
-    font-family: 'Times New Roman', Times, serif;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
   }
 
   h2 {
     font-size: 1rem;
-    display: inline;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 300;
+    margin-bottom: 0.5rem;
 
     &:not(:last-of-type) {
       margin-right: 0.5rem;
@@ -16,5 +17,10 @@
   .heading {
     border-bottom: 1px solid $divider;
     margin-bottom: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 2;
   }
 }
