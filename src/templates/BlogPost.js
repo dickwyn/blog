@@ -32,7 +32,8 @@ const BlogPost = ({ data }) => {
         <div className="heading">
           <h1>{post.frontmatter.title}</h1>
           <h2>
-            Written by {post.frontmatter.author} on {post.frontmatter.date}
+            By {post.frontmatter.author} | <a href="https://twitter.com/dickwyn">@dickwyn</a> |{' '}
+            {post.frontmatter.date}
           </h2>
         </div>
 
