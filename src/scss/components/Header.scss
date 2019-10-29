@@ -2,6 +2,12 @@ header {
   grid-area: header;
   background: black;
 
+  .title {
+    font-family: 'Staatliches', cursive;
+    font-size: 1.96rem;
+    text-transform: uppercase;
+  }
+
   a {
     color: white;
     text-decoration: none;
@@ -14,10 +20,19 @@ header {
     justify-content: space-between;
 
     button {
-      background: none;
-      border: 1px solid $divider;
-      font-size: 15px;
+      background: $primary-text;
+      font-size: 1.46rem;
       border-radius: 8px;
+      text-align: center;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+      padding: 0 20px;
+
+      &:hover {
+        background: $secondary-text;
+      }
     }
   }
 }
