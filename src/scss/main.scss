@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Staatliches&display=swap');
+
 @import './variables';
 @import './components/Layout';
 @import './components/Footer';
@@ -21,6 +23,8 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-family: 'Roboto Condensed', sans-serif;
 
   &.dark {
     background-color: $primary-text;

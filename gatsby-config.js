@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `blog.dickwyn.xyz`,
-    description: `Dickwyn's personal blog`,
+    title: `My name is Dick Wyn`,
+    description: `Dick Wyn's blog`,
     author: `@dickwyn`,
   },
   plugins: [
@@ -34,11 +34,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `My name is Dick Wyn`,
+        short_name: `Dick Wyn's blog`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#000000`,
+        theme_color: `#000000`,
         display: `minimal-ui`,
         icon: `src/images/dickwyn-emblem.png`, // This path is relative to the root of the site.
       },

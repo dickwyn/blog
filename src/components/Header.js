@@ -6,7 +6,9 @@ import { ThemeToggler } from 'gatsby-plugin-dark-mode';
 const Header = ({ siteTitle }) => (
   <header>
     <div className="content">
-      <Link to="/">{siteTitle}</Link>
+      <Link to="/" className="title">
+        {siteTitle}
+      </Link>
       <ThemeToggler className="right">
         {({ theme, toggleTheme }) => (
           <button
