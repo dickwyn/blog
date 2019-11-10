@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
+import Img from 'gatsby-image';
 import Layout from '../components/Layout';
 
 export const pageQuery = graphql`
@@ -13,6 +14,13 @@ export const pageQuery = graphql`
         title
         description
         tags
+        featuredImage {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
       }
       html
     }
@@ -36,7 +44,7 @@ const BlogPost = ({ data }) => {
             {post.frontmatter.date}
           </h2>
         </div>
-        <img src={post.frontmatter.featuredimage} alt="featured" />
+        <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>

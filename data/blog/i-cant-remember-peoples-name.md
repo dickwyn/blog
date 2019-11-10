@@ -4,8 +4,8 @@ author: Dick Wyn Yong
 title: I can’t remember people’s name
 date: 2019-09-02T06:25:07.407Z
 description: Brand new post
-featuredpost: false
-featuredimage: /src/images/sara-riano-hello.jpg
+featuredPost: false
+featuredImage: /src/images/sara-riano-hello.jpg
 tags:
   - personal
   - blog
