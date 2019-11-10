@@ -3,7 +3,7 @@ backend:
   branch: master
 
 media_folder: src/images
-public_folder: images
+public_folder: /images
 
 collections:
   - label: 'Blog Posts'
