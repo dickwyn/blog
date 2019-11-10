@@ -1,6 +1,7 @@
 .blog-post {
   h1 {
-    font-weight: 700;
+    font-size: 40px;
+    font-weight: 500;
     margin-bottom: 0.75rem;
   }
 
@@ -20,7 +21,9 @@
   }
 
   p {
-    font-size: 1.2rem;
-    line-height: 2;
+    font-family: 'Roboto Slab', serif;
+    color: #424242;
+    font-size: 18px;
+    line-height: 28.8px;
   }
 }

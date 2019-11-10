@@ -28,33 +28,45 @@ export const pageQuery = graphql`
 `;
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const {
+    markdownRemark: {
+      html,
+      frontmatter: {
+        title,
+        description,
+        author,
+        date,
+        featuredImage: {
+          childImageSharp: { fluid },
+        },
+      },
+    },
+  } = data;
 
   return (
     <Layout>
       <div className="content blog-post">
         <Helmet titleTemplate="%s | Blog">
-          <title>{`${post.frontmatter.title}`}</title>
-          <meta name="description" content={`${post.frontmatter.description}`} />
+          <title>{`${title}`}</title>
+          <meta name="description" content={`${description}`} />
         </Helmet>
         <div className="heading">
-          <h1>{post.frontmatter.title}</h1>
+          <h1>{title}</h1>
           <h2>
-            By {post.frontmatter.author} | <a href="https://twitter.com/dickwyn">@dickwyn</a> |{' '}
-            {post.frontmatter.date}
+            By {author} | <a href="https://twitter.com/dickwyn">@dickwyn</a> | {date} here
           </h2>
         </div>
-        <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <Img fluid={fluid} />
+        <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </Layout>
   );
 };
 
-// BlogPost.propTypes = {
-//   data: PropTypes.shape({
-//     markdownRemark: PropTypes.shape({}),
-//   }),
-// };
+BlogPost.propTypes = {
+  data: PropTypes.shape({
+    markdownRemark: PropTypes.object,
+  }).isRequired,
+};
 
 export default BlogPost;
