@@ -25,15 +25,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
         path: `${__dirname}/src/images`,
+        name: `images`,
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'posts',
         path: `${__dirname}/data/blog`,
+        name: 'posts',
       },
     },
     `gatsby-transformer-sharp`,
@@ -57,6 +57,12 @@ module.exports = {
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
               maxWidth: 590,
+            },
+          },
+          {
+            resolve: 'gatsby-remark-copy-linked-files',
+            options: {
+              destinationDir: 'src',
             },
           },
         ],

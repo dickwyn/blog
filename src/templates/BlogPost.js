@@ -36,7 +36,7 @@ const BlogPost = ({ data }) => {
             {post.frontmatter.date}
           </h2>
         </div>
-
+        <img src={post.frontmatter.featuredimage} alt="featured" />
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     </Layout>
