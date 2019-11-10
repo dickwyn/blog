@@ -1,3 +1,10 @@
+const netlifyCmsPaths = {
+  resolve: `gatsby-plugin-netlify-cms-paths`,
+  options: {
+    cmsConfig: `/static/admin/config.yml`,
+  },
+};
+
 module.exports = {
   siteMetadata: {
     title: `My name is Dick Wyn`,
@@ -18,14 +25,14 @@ module.exports = {
       // keep as first gatsby-source-filesystem plugin for gatsby image support
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/static`,
         name: 'uploads',
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/static/images`,
         name: `images`,
       },
     },
@@ -36,33 +43,22 @@ module.exports = {
         name: 'posts',
       },
     },
+    netlifyCmsPaths,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          // gatsby-remark-relative-images must
-          // go before gatsby-remark-images
-          {
-            resolve: `gatsby-remark-relative-images`,
-            options: {
-              name: 'uploads',
-            },
-          },
+          netlifyCmsPaths,
           {
             resolve: `gatsby-remark-images`,
             options: {
               // It's important to specify the maxWidth (in pixels) of
               // the content container as this plugin uses this as the
               // base for generating different widths of each image.
-              maxWidth: 590,
-            },
-          },
-          {
-            resolve: 'gatsby-remark-copy-linked-files',
-            options: {
-              destinationDir: 'src',
+              maxWidth: 930,
+              backgroundColor: 'transparent',
             },
           },
         ],
@@ -77,7 +73,7 @@ module.exports = {
         background_color: `#000000`,
         theme_color: `#000000`,
         display: `minimal-ui`,
-        icon: `src/images/dickwyn-emblem.png`, // This path is relative to the root of the site.
+        icon: `static/images/dickwyn-emblem.png`, // This path is relative to the root of the site.
       },
     },
     {

@@ -5,7 +5,7 @@ title: I can’t remember people’s name
 date: 2019-09-02T06:25:07.407Z
 description: Brand new post
 featuredPost: false
-featuredImage: /src/images/sara-riano-hello.jpg
+featuredImage: /images/sara-riano-hello.jpg
 tags:
   - personal
   - blog
