@@ -1,29 +1,35 @@
 .blog-post {
-  h1 {
+  h1.post-title {
+    font-family: 'Roboto Slab', serif;
     font-size: 40px;
     font-weight: 500;
-    margin-bottom: 0.75rem;
+    margin: 0 0 0.75rem;
   }
 
-  h2 {
+  h2.post-subtitle {
+    font-family: 'Roboto Slab', serif;
+    color: $secondary-text;
     font-size: 1rem;
-    font-weight: 300;
-    margin-bottom: 0.5rem;
+    line-height: 1.75;
+    margin: 0.25rem 0 0;
 
     &:not(:last-of-type) {
       margin-right: 0.5rem;
     }
+
+    & > a > svg {
+      margin-right: 3px;
+    }
   }
 
   .heading {
-    border-bottom: 1px solid $divider;
-    margin-bottom: 2rem;
+    margin: 1.8rem 0;
   }
 
   p {
     font-family: 'Roboto Slab', serif;
     color: #424242;
-    font-size: 18px;
-    line-height: 28.8px;
+    font-size: 1rem;
+    line-height: 1.75;
   }
 }

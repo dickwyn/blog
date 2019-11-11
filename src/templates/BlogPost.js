@@ -3,13 +3,17 @@ import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 import { graphql } from 'gatsby';
 import Img from 'gatsby-image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fab } from '@fortawesome/free-brands-svg-icons';
 import Layout from '../components/Layout';
+
+library.add(fab);
 
 export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        author
         date(formatString: "MMMM DD, YYYY")
         title
         description
@@ -22,6 +26,7 @@ export const pageQuery = graphql`
           }
         }
       }
+      timeToRead
       html
     }
   }
@@ -30,16 +35,16 @@ export const pageQuery = graphql`
 const BlogPost = ({ data }) => {
   const {
     markdownRemark: {
-      html,
       frontmatter: {
         title,
         description,
-        author,
         date,
         featuredImage: {
           childImageSharp: { fluid },
         },
       },
+      timeToRead,
+      html,
     },
   } = data;
 
@@ -51,9 +56,13 @@ const BlogPost = ({ data }) => {
           <meta name="description" content={`${description}`} />
         </Helmet>
         <div className="heading">
-          <h1>{title}</h1>
-          <h2>
-            By {author} | <a href="https://twitter.com/dickwyn">@dickwyn</a> | {date} here
+          <h1 className="post-title">{title}</h1>
+          <h2 className="post-subtitle">
+            <a href="https://twitter.com/dickwyn" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={['fab', 'twitter']} />
+              @dickwyn
+            </a>{' '}
+            ・{date}・{timeToRead} min read
           </h2>
         </div>
         <Img fluid={fluid} />

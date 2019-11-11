@@ -12,6 +12,7 @@ const getPosts = () => {
             title
             date(formatString: "MMMM DD, YYYY")
           }
+          timeToRead
         }
       }
     }
@@ -21,6 +22,7 @@ const getPosts = () => {
     slug: post.fields.slug,
     title: post.frontmatter.title,
     date: post.frontmatter.date,
+    timeToRead: post.timeToRead,
   }));
 };
 
