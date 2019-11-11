@@ -51,5 +51,20 @@ body {
         color: $background-light;
       }
     }
+
+    .banner {
+      background-color: #ffa000;
+    }
+  }
+}
+
+.banner {
+  background-color: #ffc107;
+  padding: 0 1rem;
+
+  span,
+  p,
+  a {
+    display: inline-block;
   }
 }

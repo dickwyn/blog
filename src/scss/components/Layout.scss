@@ -27,6 +27,9 @@
 
   main {
     grid-area: content;
+    .content {
+      padding: 1.45rem 1.0875rem;
+    }
   }
 
   @media (max-width: 768px) {
