@@ -32,4 +32,11 @@
     font-size: 1rem;
     line-height: 1.75;
   }
+
+  a.previous-post,
+  a.next-post {
+    font-family: 'Roboto Slab', serif;
+    display: block;
+    line-height: 1.75;
+  }
 }

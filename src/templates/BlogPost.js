@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -32,7 +32,7 @@ export const pageQuery = graphql`
   }
 `;
 
-const BlogPost = ({ data }) => {
+const BlogPost = ({ data, pageContext }) => {
   const {
     markdownRemark: {
       frontmatter: {
@@ -47,6 +47,8 @@ const BlogPost = ({ data }) => {
       html,
     },
   } = data;
+
+  const { previous, next } = pageContext;
 
   return (
     <Layout>
@@ -67,6 +69,16 @@ const BlogPost = ({ data }) => {
         </div>
         <Img fluid={fluid} />
         <div dangerouslySetInnerHTML={{ __html: html }} />
+        {previous && (
+          <Link to={`/blog/${previous.fields.slug}`} className="previous-post">
+            ← {previous.frontmatter.title}
+          </Link>
+        )}
+        {next && (
+          <Link to={`/blog/${next.fields.slug}`} className="next-post">
+            {next.frontmatter.title} →
+          </Link>
+        )}
       </div>
     </Layout>
   );

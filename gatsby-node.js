@@ -13,6 +13,9 @@ exports.createPages = ({ actions, graphql }) => {
             fields {
               slug
             }
+            frontmatter {
+              title
+            }
           }
           node {
             id
@@ -27,6 +30,9 @@ exports.createPages = ({ actions, graphql }) => {
           previous {
             fields {
               slug
+            }
+            frontmatter {
+              title
             }
           }
         }
@@ -48,6 +54,8 @@ exports.createPages = ({ actions, graphql }) => {
         component: path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.js`),
         context: {
           id,
+          previous: edge.previous,
+          next: edge.next,
         },
       });
     });
