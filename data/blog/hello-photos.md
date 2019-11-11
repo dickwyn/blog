@@ -5,7 +5,7 @@ title: Hello Photos
 date: 2019-11-10T16:30:50.529Z
 description: This is a test post with photos
 featuredPost: false
-featuredImage: /images/gatsby-astronaut.png
+featuredImage: /images/screen-shot-2019-11-10-at-5.04.07-pm.png
 tags:
   - test
   - photo
