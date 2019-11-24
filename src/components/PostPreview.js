@@ -22,7 +22,7 @@ PostPreview.propTypes = {
     title: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
-    timeToRead: PropTypes.string.isRequired,
+    timeToRead: PropTypes.number.isRequired,
   }).isRequired,
 };
 
