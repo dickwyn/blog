@@ -8,10 +8,16 @@ const BlogPost = ({ data }) => {
         <title>{`${data.title}`}</title>
         <meta name="description" content={`${data.description}`} />
       </Helmet>
-      <div className="heading">
+      <div className="preview">
         <h1>{data.title}</h1>
-        <h2>Written by {data.author} on</h2>
-        {data.body}
+        <img src={data.featuredImage} />
+        <div
+          className="preview-body"
+          dangerouslySetInnerHTML={{ __html: data.body }}
+        />
+        <hr />
+        <h2>Debugging</h2>
+        <pre>{JSON.stringify(data, 'null', '\t')}</pre>
       </div>
     </div>
   );
