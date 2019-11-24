@@ -10,10 +10,7 @@ const PostPreview = ({ post }) => (
     <p className="subtitle">
       {post.date}・{post.timeToRead} min read
     </p>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur ullamcorper velit eros, id
-      volutpat ipsum egestas vitae. Quisque in eros nisi.
-    </p>
+    <p>{post.description}</p>
   </div>
 );
 
@@ -21,6 +18,7 @@ PostPreview.propTypes = {
   post: PropTypes.shape({
     title: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
+    description: PropTypes.string.isRequired,
     slug: PropTypes.string.isRequired,
     timeToRead: PropTypes.number.isRequired,
   }).isRequired,
