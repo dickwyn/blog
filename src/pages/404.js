@@ -11,7 +11,6 @@ class NotFoundPage extends Component {
       location: { pathname },
     } = this.props;
 
-    console.log(`https://dickwyn.wordpress.com${pathname}`);
     if (pathname.includes('/20')) {
       global.window.location.href = `https://dickwyn.wordpress.com${pathname}`;
     }
@@ -51,5 +50,7 @@ NotFoundPage.propTypes = {
 };
 
 export default props => (
-  <Location>{locationProps => <NotFoundPage {...locationProps} {...props} />}</Location>
+  <Location>
+    {locationProps => <NotFoundPage {...locationProps} {...props} />}
+  </Location>
 );
