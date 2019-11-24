@@ -1,3 +1,5 @@
+/* eslint-disable react/no-danger */
+/* eslint-disable react/prop-types */
 import React from 'react';
 import Helmet from 'react-helmet';
 
@@ -10,11 +12,8 @@ const BlogPost = ({ data }) => {
       </Helmet>
       <div className="preview">
         <h1>{data.title}</h1>
-        <img src={data.featuredImage} />
-        <div
-          className="preview-body"
-          dangerouslySetInnerHTML={{ __html: data.body }}
-        />
+        <img src={data.featuredImage} alt="featured" />
+        <div className="preview-body" dangerouslySetInnerHTML={{ __html: data.body }} />
         <hr />
         <h2>Debugging</h2>
         <pre>{JSON.stringify(data, 'null', '\t')}</pre>
