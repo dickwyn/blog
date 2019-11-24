@@ -10,7 +10,8 @@ tags:
   - test
   - photo
 ---
-![](/images/20191106_195936.jpg)
+
+![vertical-photo-phone](/images/20191106_195936.jpg)
 
 Is this image working
 
