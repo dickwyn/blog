@@ -58,15 +58,11 @@ const BlogPost = ({ data, pageContext }) => {
           <title>{`${title}`}</title>
           <meta name="description" content={`${description}`} />
         </Helmet>
-        <AlertBanner></AlertBanner>
+        <AlertBanner />
         <div className="heading">
           <h1 className="post-title">{title}</h1>
           <h2 className="post-subtitle">
-            <a
-              href="https://twitter.com/dickwyn"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="https://twitter.com/dickwyn" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={['fab', 'twitter']} />
               @dickwyn
             </a>{' '}
