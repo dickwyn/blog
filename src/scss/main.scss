@@ -7,6 +7,7 @@
 @import './components/Header';
 @import './components/PostPreview';
 @import './components/BlogPost';
+@import './components/AlertBanner';
 
 html,
 body,
@@ -18,53 +19,41 @@ html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-}
 
-body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  body {
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Roboto Condensed', sans-serif;
 
-  font-family: 'Roboto Condensed', sans-serif;
+    a {
+      &:link {
+        color: $primary;
+      }
 
-  a {
-    &:link {
-      color: $primary;
-    }
+      &:visited {
+        color: $accent;
+      }
 
-    &:visited {
-      color: $accent;
-    }
-
-    &:hover,
-    &:active {
-      color: $dark-primary;
-    }
-  }
-
-  &.dark {
-    background-color: $background-dark;
-    color: $white;
-
-    .blog-post {
-      p {
-        color: $background-light;
+      &:hover,
+      &:active {
+        color: $dark-primary;
       }
     }
 
-    .banner {
-      background-color: #ffa000;
+    &.dark {
+      background-color: $background-dark;
+      color: $white;
+
+      .blog-post {
+        p {
+          color: $background-light;
+        }
+      }
+
+      .banner.alert {
+        background-color: #ffa000;
+      }
     }
-  }
-}
-
-.banner {
-  background-color: #ffc107;
-  padding: 0 1rem;
-
-  span,
-  p,
-  a {
-    display: inline-block;
   }
 }
