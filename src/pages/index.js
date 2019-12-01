@@ -6,7 +6,8 @@ import getDevelopmentPosts from '../hooks/get-development-posts';
 import PostPreview from '../components/PostPreview';
 
 const IndexPage = () => {
-  const posts = process.env.NODE_ENV !== 'development' ? getDevelopmentPosts() : getPosts();
+  const posts =
+    process.env.NODE_ENV === 'development' ? getDevelopmentPosts() : getPosts();
 
   return (
     <Layout>
