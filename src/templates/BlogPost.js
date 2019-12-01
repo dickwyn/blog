@@ -54,7 +54,7 @@ const BlogPost = ({ data, pageContext }) => {
   return (
     <Layout>
       <div className="content blog-post">
-        <Helmet titleTemplate="%s | Blog">
+        <Helmet titleTemplate="%s - Blog">
           <title>{`${title}`}</title>
           <meta name="description" content={`${description}`} />
         </Helmet>
