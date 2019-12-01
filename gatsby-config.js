@@ -43,6 +43,13 @@ module.exports = {
         name: 'posts',
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: `${__dirname}/data/dev-blog`,
+        name: 'dev-posts',
+      },
+    },
     netlifyCmsPaths,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
