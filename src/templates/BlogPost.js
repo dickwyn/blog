@@ -7,7 +7,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 import Layout from '../components/Layout';
-import AlertBanner from '../components/AlertBanner';
 
 library.add(fab);
 
@@ -58,7 +57,6 @@ const BlogPost = ({ data, pageContext }) => {
           <title>{`${title}`}</title>
           <meta name="description" content={`${description}`} />
         </Helmet>
-        <AlertBanner />
         <div className="heading">
           <h1 className="post-title">{title}</h1>
           <h2 className="post-subtitle">

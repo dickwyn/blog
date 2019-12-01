@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '../components/Layout';
 import SEO from '../components/Seo';
 import getPosts from '../hooks/get-posts';
-import AlertBanner from '../components/AlertBanner';
+
 import PostPreview from '../components/PostPreview';
 
 const IndexPage = () => {
@@ -12,7 +12,6 @@ const IndexPage = () => {
     <Layout>
       <SEO title="Home" />
       <div className="content">
-        <AlertBanner />
         {posts.map(post => (
           <PostPreview key={post.slug} post={post} />
         ))}
