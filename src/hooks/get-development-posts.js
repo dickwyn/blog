@@ -1,11 +1,11 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-const getPosts = () => {
+const getDevelopmentPosts = () => {
   const data = useStaticQuery(graphql`
     query {
       allMarkdownRemark(
         sort: { fields: [frontmatter___date], order: DESC }
-        filter: { fileAbsolutePath: { regex: "/data/blog//" } }
+        filter: { fileAbsolutePath: { regex: "/data/blog/|/data/dev-blog/" } }
       ) {
         nodes {
           fields {
@@ -31,4 +31,4 @@ const getPosts = () => {
   }));
 };
 
-export default getPosts;
+export default getDevelopmentPosts;
