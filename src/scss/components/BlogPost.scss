@@ -3,15 +3,15 @@
     max-height: 430px;
   }
 
-  h1.post-title,
-   {
+  h1.post-title {
     font-family: 'Roboto Slab', serif;
     font-size: 40px;
     font-weight: 500;
     margin: 0 0 0.75rem;
   }
 
-  h2.post-subtitle, figure figcaption {
+  h2.post-subtitle,
+  figure figcaption {
     font-family: 'Roboto Slab', serif;
     color: $secondary-text;
     font-size: 1rem;
