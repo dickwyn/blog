@@ -13,7 +13,7 @@ const getDevelopmentPosts = () => {
           }
           frontmatter {
             title
-            date(formatString: "MMMM DD, YYYY")
+            date
             description
           }
           timeToRead

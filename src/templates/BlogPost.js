@@ -6,6 +6,7 @@ import Img from 'gatsby-image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fab } from '@fortawesome/free-brands-svg-icons';
+import moment from 'moment';
 import Layout from '../components/Layout';
 
 library.add(fab);
@@ -14,7 +15,7 @@ export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
-        date(formatString: "MMMM DD, YYYY")
+        date
         title
         description
         tags
@@ -50,6 +51,10 @@ const BlogPost = ({ data, pageContext }) => {
 
   const { previous, next } = pageContext;
 
+  const normalizedDate = moment(date)
+    .local()
+    .format('MMMM DD, YYYY');
+
   return (
     <Layout>
       <div className="content blog-post">
@@ -64,7 +69,7 @@ const BlogPost = ({ data, pageContext }) => {
               <FontAwesomeIcon icon={['fab', 'twitter']} />
               @dickwyn
             </a>{' '}
-            ・{date}・{timeToRead} min read
+            ・{normalizedDate}・{timeToRead} min read
           </h2>
         </div>
         <Img fluid={fluid} imgStyle={{ objectFit: 'cover' }} />

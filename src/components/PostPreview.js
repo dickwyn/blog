@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'gatsby';
+import moment from 'moment';
 
 const PostPreview = ({ post }) => (
   <div className="post-preview">
@@ -8,7 +9,10 @@ const PostPreview = ({ post }) => (
       <Link to={`blog${post.slug}`}>{post.title}</Link>
     </h2>
     <p className="subtitle">
-      {post.date}・{post.timeToRead} min read
+      {moment(post.date)
+        .local()
+        .format('MMMM DD, YYYY')}
+      ・{post.timeToRead} min read
     </p>
     <p>{post.description}</p>
   </div>
