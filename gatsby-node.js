@@ -7,7 +7,7 @@ exports.createPages = ({ actions, graphql }) => {
 
   return graphql(
     `
-      query getImages($url: String) {
+      query($posts: String) {
         allMarkdownRemark(filter: { fileAbsolutePath: { regex: $posts } }, limit: 1000) {
           edges {
             next {
