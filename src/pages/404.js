@@ -11,7 +11,7 @@ class NotFoundPage extends Component {
       location: { pathname },
     } = this.props;
 
-    if (pathname.includes('/20')) {
+    if (!pathname.includes('/images') && pathname.includes('/20')) {
       global.window.location.href = `https://dickwyn.wordpress.com${pathname}`;
     }
   }
