@@ -5,40 +5,43 @@ const { fmImagesToRelative } = require('gatsby-remark-relative-images');
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
 
-  return graphql(`
-    {
-      allMarkdownRemark(limit: 1000) {
-        edges {
-          next {
-            fields {
-              slug
+  return graphql(
+    `
+      query getImages($url: String) {
+        allMarkdownRemark(filter: { fileAbsolutePath: { regex: $posts } }, limit: 1000) {
+          edges {
+            next {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
             }
-            frontmatter {
-              title
+            node {
+              id
+              fields {
+                slug
+              }
+              frontmatter {
+                tags
+                templateKey
+              }
             }
-          }
-          node {
-            id
-            fields {
-              slug
-            }
-            frontmatter {
-              tags
-              templateKey
-            }
-          }
-          previous {
-            fields {
-              slug
-            }
-            frontmatter {
-              title
+            previous {
+              fields {
+                slug
+              }
+              frontmatter {
+                title
+              }
             }
           }
         }
       }
-    }
-  `).then(result => {
+    `,
+    { posts: process.env.NODE_ENV === 'development' ? '/blog/' : '/data/blog/' }
+  ).then(result => {
     if (result.errors) {
       result.errors.forEach(e => console.error(e.toString()));
       return Promise.reject(result.errors);
