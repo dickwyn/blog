@@ -67,7 +67,7 @@ const BlogPost = ({ data, pageContext }) => {
             ・{date}・{timeToRead} min read
           </h2>
         </div>
-        <Img fluid={fluid} imgStyle={{ objectFit: 'contain' }} />
+        <Img fluid={fluid} imgStyle={{ objectFit: 'cover' }} />
         <div className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
         {previous && (
           <Link to={`/blog/${previous.fields.slug}`} className="previous-post">
