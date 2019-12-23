@@ -2,7 +2,7 @@
 templateKey: BlogPost
 author: Dick Wyn Yong
 title: The 3 best things I did in 2019
-date: 2019-12-22T23:35:29.791Z
+date: 2019-12-23T00:55:29.791Z
 description: >-
   My first year in adulthood, this is sort of a retrospective of some successful
   trends / things that i did this year.
