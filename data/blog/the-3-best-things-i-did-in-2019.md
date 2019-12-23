@@ -13,7 +13,7 @@ tags:
   - review
   - personal
 ---
-I have done a "retrospective" kind of post in a quite a few years. I remember doing it yearly when I was doing tech blogging. I got the idea to do it when I saw Emma Wedekind's tweet asking about the "best thing that happened to you in 2019!". I thought deeply about it and there was truly a lot of great things that happened to me. I started a job my first development job this year, lived off of my own income for the first time ever, flew half way across the world to spend time with my best friend, etc. The list goes on.
+I haven't done a "retrospective" kind of post in a quite a few years. I remember doing it yearly when I was doing tech blogging. I got the idea to do it when I saw Emma Wedekind's tweet asking about the "best thing that happened to you in 2019!". I thought deeply about it and there was truly a lot of great things that happened to me. I started a job my first development job this year, lived off of my own income for the first time ever, flew half way across the world to spend time with my best friend, etc. The list goes on.
 
 https://twitter.com/EmmaWedekind/status/1207718548833013760
 
