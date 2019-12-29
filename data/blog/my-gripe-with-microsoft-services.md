@@ -47,7 +47,7 @@ This next bit on syncing is going to be a little messy as I'm trying to connect 
 
 <figure>
   <img src="/images/microsoft-outlook-sidebar-screenshot-mac.png" alt="Microsoft Outlook Mac sidebar screenshot">
-  <figcaption>A screenshot of the Mac version of Microsoft Outlook </figcaption>
+  <figcaption>A screenshot of the Mac version of Microsoft Outlook. Highlighted on the bottom left is the sidebar with the Notes and Tasks tab.</figcaption>
 </figure>
 
 I'm a big fan of the Microsoft Outlook application for Windows and Mac. I am a bit salty that rules are not on the Mac version of Outlook but the overall experience is great. Emails, syncing and calendar features are great. What's not so great is the somewhat confusing, slow and undocumented syncing nature of the Tasks and Notes tab on Outlook.
