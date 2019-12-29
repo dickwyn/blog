@@ -70,6 +70,25 @@
     }
   }
 
+  .post-tags {
+    & > p {
+      display: inline-block;
+      margin: 0.25rem 0 1rem;
+      padding: 0.25rem 0.75rem;
+      background-color: $accent;
+      color: $white;
+      text-transform: lowercase;
+
+      &.label {
+        background-color: $primary;
+      }
+
+      &:not(:last-child) {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
   a.previous-post,
   a.next-post {
     font-family: 'Roboto Slab', serif;

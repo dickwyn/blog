@@ -39,6 +39,7 @@ const BlogPost = ({ data, pageContext }) => {
       frontmatter: {
         title,
         description,
+        tags,
         date,
         featuredImage: {
           childImageSharp: { fluid },
@@ -65,7 +66,11 @@ const BlogPost = ({ data, pageContext }) => {
         <div className="heading">
           <h1 className="post-title">{title}</h1>
           <h2 className="post-subtitle">
-            <a href="https://twitter.com/dickwyn" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://twitter.com/dickwyn"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <FontAwesomeIcon icon={['fab', 'twitter']} />
               @dickwyn
             </a>{' '}
@@ -74,6 +79,12 @@ const BlogPost = ({ data, pageContext }) => {
         </div>
         <Img fluid={fluid} imgStyle={{ objectFit: 'cover' }} />
         <div className="post-body" dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="post-tags">
+          <p className="label">Tagged</p>
+          {tags.map(tag => (
+            <p>{tag}</p>
+          ))}
+        </div>
         {previous && (
           <Link to={`/blog/${previous.fields.slug}`} className="previous-post">
             ← {previous.frontmatter.title}
@@ -92,6 +103,11 @@ const BlogPost = ({ data, pageContext }) => {
 BlogPost.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.object,
+  }).isRequired,
+  pageContext: PropTypes.shape({
+    id: PropTypes.string,
+    previous: PropTypes.object,
+    next: PropTypes.object,
   }).isRequired,
 };
 
