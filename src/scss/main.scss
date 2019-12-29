@@ -46,6 +46,7 @@ html {
       color: $white;
 
       .blog-post {
+        ul > li,
         p {
           color: $background-light;
         }
