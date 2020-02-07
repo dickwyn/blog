@@ -5,16 +5,20 @@ import moment from 'moment';
 
 const PostPreview = ({ post }) => (
   <div className="post-preview">
+    <p className="subtitle">
+      {moment.duration(moment(new Date()).diff(post.date)).asDays() < 90
+        ? moment(post.date)
+            .local()
+            .format('MMM DD')
+        : moment(post.date)
+            .local()
+            .format('MMM YYYY')}
+    </p>
     <h2 className="title">
       <Link to={`blog${post.slug}`}>{post.title}</Link>
     </h2>
-    <p className="subtitle">
-      {moment(post.date)
-        .local()
-        .format('MMMM DD, YYYY')}
-      ・{post.timeToRead} min read
-    </p>
-    <p>{post.description}</p>
+    <p className="description">{post.description}</p>
+    <Link to={`blog${post.slug}`}>continue reading →</Link>
   </div>
 );
 
