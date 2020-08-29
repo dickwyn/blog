@@ -1,6 +1,6 @@
 # blog.dickwyn.xyz 🌟
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/59226ad9-33cd-4435-b984-5428f2728e4f/deploy-status)](https://app.netlify.com/sites/priceless-curie-5a36d0/deploys)
+⚠️ This repository is no longer being maintained, this blog has been fused into my website ([github.com/dickwyn/v3](https://github.com/dickwyn/v3))
 
 My personal blog built with a combination of Gatsby and Netlify CMS.
 
@@ -17,18 +17,18 @@ This project is built with:
 **Development Mode**
 
 ```sh
-$ git clone https://github.com/dickwyn/blog.git
-$ cd blog
-$ yarn
-$ gatsby develop
+git clone https://github.com/dickwyn/blog.git
+cd blog
+yarn
+gatsby develop
 ```
 
 Starts the site at `http://localhost:8000`!
 
 **Production Mode**
 
-```
-$ gatsby serve
+```sh
+gatsby serve
 ```
 
 ## Inspiration
